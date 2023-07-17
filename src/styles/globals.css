@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: CircularMedium;
+    src: url('../assets/fonts/CircularStd-Medium.ttf');
+}
+
+@font-face {
+    font-family: CircularBold;
+    src: url('../assets/fonts/CircularStd-Bold.ttf');
+}
+
+@font-face {
+    font-family: CircularBlack;
+    src: url('../assets/fonts/CircularStd-Black.ttf');
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.gradientBackground {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+.lightBackground {
+    background-image: url('../assets/images/backgrounds/bg-light.png');
+}
+
+.circularMedium {
+    font-family: 'CircularMedium';
+}
+
+.circularBold {
+    font-family: 'CircularBold';
+}
+
+.circularBlack {
+    font-family: 'CircularBlack';
+}
+
+.glassy {
+    background: radial-gradient(231.00% 135.80% at 0.90% 2.98%, rgba(222, 222, 222, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.horSep {
+    width: 2px;
+    background-color: #fff;
+}
+
+
+.tradingDrawer {
+    width: 30% !important;
+    background: rgba(135, 135, 135, 0.48) !important;
+    backdrop-filter: blur(18.6px) !important;
+}
+
+.selectedDurationBtn {
+    background: linear-gradient(93.04deg, rgba(0, 177, 92, 0.51) 1.58%, rgba(19, 147, 155, 0.76) 98.72%);
+}
+
+#tradingCollateralBox .react-tabs__tab--selected {
+    background: linear-gradient(185.04deg, #00B15C -176.35%, rgba(66, 135, 173, 0.67) 300.11%) !important;
+    border-width: 2px 2px 1px 2px !important;
+    border-style: solid !important;
+    border-color: #FFFFFF !important;
+    box-shadow: 3px 0px 1px rgba(255, 255, 255, 0.25) !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
+
+#tradingPositionBox .react-tabs__tab--selected {
+    background: linear-gradient(185.04deg, #00B15C -176.35%, rgba(66, 135, 173, 0.67) 300.11%) !important;
+    border-width: 2px 2px 1px 2px !important;
+    border-style: solid !important;
+    border-color: #FFFFFF !important;
+    box-shadow: 3px 0px 1px rgba(255, 255, 255, 0.25) !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
+
+.rdt_Table::-webkit-scrollbar {
+    width: 3px !important;
+}
+
+.rdt_Table::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 5px !important;
+}
+
+.rdt_Table::-webkit-scrollbar-thumb {
+    background: #55a489 !important;
+    border-radius: 3px !important;
+}
+
+.rdt_Table::-webkit-scrollbar-thumb:hover {
+    background: #78e5bf !important;
+    border-radius: 3px !important;
+}
+
+.react-dropdown-select{
+    max-width: 98% !important;
+    border-width: 0px !important;
+    align-items: center !important;
+    margin-left: 1.5% !important;
+}
+
+.react-dropdown-select-content{
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    font-family: 'CircularBold' !important;
+}
+
+.react-dropdown-select-dropdown-handle{
+    filter: brightness(1) invert(1);
+}
+
+.react-dropdown-select-input::placeholder{
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    font-family: 'CircularBold' !important;
+}
+
+.react-dropdown-select-dropdown{
+    border-radius: 5px !important;
+    width: 29vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.react-dropdown-select-item{
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #464646 !important;
+    padding-top: 3% !important;
+    padding-bottom: 3% !important;
+    font-family: 'CircularBold' !important;
+}
