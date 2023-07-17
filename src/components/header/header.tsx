@@ -2,7 +2,6 @@
 import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Popover from "./popover";
 
 // Assets
 import headerLogo from "../../assets/images/logo/logo@1x1.png";
