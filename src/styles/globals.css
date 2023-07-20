@@ -147,3 +147,43 @@ body {
     padding-bottom: 3% !important;
     font-family: 'CircularBold' !important;
 }
+
+.dnaKnf, .jzvIMG, .jbKSMH, .hOqKLK{
+    font-size: .6rem;
+    margin-left: 5%;
+}
+
+#panel\:R5akm\:0:empty{
+    display: none;
+}
+
+#panel\:R5akm\:1:empty{
+    display: none;
+}
+
+#panel\:R3akm\:1:empty{
+    display: none;
+}
+
+#panel\:R3akm\:0:empty{
+    display: none;
+}
+
+.szh-menu{
+    background: radial-gradient(231.00% 135.80% at 0.90% 2.98%, rgba(222, 222, 222, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.szh-menu__item:hover{
+    background-color:rgba(153, 153, 153, 0.107) !important;
+}
+
+.szh-menu__item:hover p{
+    color:rgb(227, 227, 227) !important;
+}
+
+.szh-menu__item:not(:hover){
+    background-color: transparent !important;
+}

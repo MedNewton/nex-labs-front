@@ -53,10 +53,12 @@ const DrawerContent: React.FC = () => {
       style: {
         fontWeight: "700",
       },
+      sortable: true,
     },
     {
       name: "Last",
       selector: (row) => row.last,
+      sortable: true,
     },
     {
       name: "Chg",
@@ -69,6 +71,7 @@ const DrawerContent: React.FC = () => {
           },
         },
       ],
+      sortable: true,
     },
     {
       name: "Chg%",
@@ -81,6 +84,7 @@ const DrawerContent: React.FC = () => {
           },
         },
       ],
+      sortable: true,
     },
   ];
 

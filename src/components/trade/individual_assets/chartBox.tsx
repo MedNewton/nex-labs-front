@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 //Essentials
 import React from "react";
 import { useState, useEffect } from "react";
@@ -19,7 +20,7 @@ const ChartBox: React.FC = () => {
     useTradeStore();
 
   return (
-    <div className="glassy flex h-fit w-2/3 flex-col items-start justify-between rounded-2xl p-3">
+    <div className="glassy flex h-fit w-3/4 flex-col items-start justify-between rounded-2xl p-3">
       <div className="flex h-fit w-full flex-row items-start justify-between px-2 py-1">
         <div className="flex h-fit w-fit flex-row items-center justify-between">
           <div

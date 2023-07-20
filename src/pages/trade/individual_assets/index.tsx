@@ -36,7 +36,7 @@ export default function IndividaulAssetsPerpetuals() {
       </Head>
       <main className="gradientBackground lightBackground z-50 flex h-fit flex-col items-center justify-center">
         <Header />
-        <section className="mb-10 flex h-fit w-full flex-row items-start justify-between px-5 pt-20">
+        <section className="mb-10 flex h-fit w-full flex-row items-start justify-between pl-2 pr-5 pt-20">
           <SideBar />
           <div className="ml-14 mr-6 h-fit w-full">
             <DataTopBar />

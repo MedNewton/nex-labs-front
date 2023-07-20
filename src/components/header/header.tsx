@@ -1,7 +1,18 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 //Essentials
 import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  ControlledMenu,
+  MenuItem,
+  useHover,
+  useMenuState,
+} from "@szhsin/react-menu";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/slide.css";
+
+import HoverMenuWithTransition from "./popper";
 
 // Assets
 import headerLogo from "../../assets/images/logo/logo@1x1.png";
@@ -13,21 +24,24 @@ import search from "../../assets/icons/search.svg";
 import headerMenu from "~/menus";
 
 const Header: React.FC = () => {
+  
+  
+
   return (
-    <header className="left-0 w-screen px-10 py-4 ">
-      <div className="fixed left-0 flex w-5/12 items-start justify-between px-5">
+    <header className="left-0 w-screen px-10 py-4 z-50">
+      <div className="fixed left-0 flex w-5/12 items-start justify-between pl-2 pr-5">
         <div className="flex items-center">
           <Image src={headerLogo} alt="Logo" width={35} height={35} />
           <div className="flex items-start justify-evenly px-10">
-            {headerMenu.map((item, index) => {
-              return (
-                <Link href={{ pathname: item.links }} key={index}>
-                  <p className="circularMedium text-lg-center ml-5 mr-5 text-white">
-                    {item.name}
-                  </p>
-                </Link>
-              );
-            })}
+            {
+              headerMenu.map((item, index)=>{
+                console.log(item);
+                return(
+                  <HoverMenuWithTransition key={index} menuItem={item} />
+                )
+              })
+            }
+            
           </div>
         </div>
       </div>
