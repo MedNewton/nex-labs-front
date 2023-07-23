@@ -17,9 +17,13 @@
     src: url('../assets/fonts/CircularStd-Black.ttf');
 }
 
-html,
-body {
+html
+{
     overflow-x: hidden;
+}
+
+body{
+    overflow-x: scroll;
 }
 
 .gradientBackground {
@@ -134,7 +138,8 @@ body {
 
 .react-dropdown-select-dropdown{
     border-radius: 5px !important;
-    width: 29vw !important;
+    width: fit-content !important;
+    padding: 5%;
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -169,11 +174,21 @@ body {
     display: none;
 }
 
+.react-tabs div:empty{
+    display: none !important;
+}
+
 .szh-menu{
     background: radial-gradient(231.00% 135.80% at 0.90% 2.98%, rgba(222, 222, 222, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
     backdrop-filter: blur(20px) !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
+    min-width: none !important;
+}
+
+.szh-menu__item{
+    min-width: none !important;
+    width: fit-content !important;
 }
 
 .szh-menu__item:hover{
@@ -186,4 +201,40 @@ body {
 
 .szh-menu__item:not(:hover){
     background-color: transparent !important;
+}
+
+.szh-menu__arrow{
+    background: radial-gradient(231.00% 135.80% at 0.90% 2.98%, rgba(222, 222, 222, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    z-index: 0;
+}
+
+.percentageSelector{
+    width: fit-content !important;
+    padding: 3px !important;
+}
+
+.percentageSelector:focus{
+    border-width: 0px !important;
+}
+
+.react-dropdown-select-content{
+    width: fit-content !important;
+    height: fit-content !important;
+    flex-wrap: nowrap !important;
+}
+
+.tradeGrid{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#tradeContainer{
+    height: 80vh;
+    transition: height 200ms ease;
+    overflow-y: visible;
+}
+
+.react-resizable-handle{
+    opacity: 0 !important;
 }

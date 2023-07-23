@@ -14,7 +14,7 @@ import settings_icon from '../../../assets/icons/settings.svg';
 
 const SideBar: React.FC = () => {
     return(
-        <div className="w-fit h-fit flex flex-col items-center justify-between px-2">
+        <div className="w-fit h-100 flex flex-col items-start justify-normal px-3 pt-5 glassy rounded-xl" id="sideBar">
             <Image src={individual_assets_icon} height={23} width={23} alt="individual assets icon" className="mb-7"></Image>
             <Image src={indices_icon} height={23} width={23} alt="individual assets icon" className="mb-7"></Image>
             <Image src={prediction_markets_icon} height={23} width={23} alt="individual assets icon" className="mb-7"></Image>

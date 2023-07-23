@@ -28,8 +28,8 @@ const Header: React.FC = () => {
   
 
   return (
-    <header className="left-0 w-screen px-10 py-4 z-50">
-      <div className="fixed left-0 flex w-5/12 items-start justify-between pl-2 pr-5">
+    <header className="left-0 w-screen px-4 py-4 z-50 flex flex-row items-start justify-between">
+      <div className="left-0 flex w-1/2 items-start justify-between pl-2">
         <div className="flex items-center">
           <Image src={headerLogo} alt="Logo" width={35} height={35} />
           <div className="flex items-start justify-evenly px-10">
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="fixed right-0 flex w-1/3 justify-end px-10 align-middle">
+      <div className="right-0 flex w-1/2 justify-end px-10 align-middle">
         <Image
           src={search}
           alt="search"

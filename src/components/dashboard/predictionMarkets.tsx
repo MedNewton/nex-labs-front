@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 //Essentials
 import { useState, useEffect } from "react";
 import Link from "next/link";
