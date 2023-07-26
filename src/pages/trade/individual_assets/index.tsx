@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-import { useState, useEffect } from "react";
 // drawer
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
@@ -23,24 +21,20 @@ import DrawerContent from "~/components/trade/individual_assets/DrawerContent";
 const ReactGridLayout = WidthProvider(GridLayout);
 
 export default function IndividaulAssetsPerpetuals() {
-  const { isDrawerOpen, toggleDrawer } = useTradeStore();
+  const { isDrawerOpen, toggleDrawer, chartWidth, isTradeLocked } = useTradeStore();
 
   const openSideBar = () => {
     console.log("hahaha");
   };
 
   const layout = [
-    { i: "chartBox", x: 0, y: 0, w: 4, h: 6.5, minW: 4, maxW:6, maxH: 6.5, minH: 6.5, isBounded: true},
+    { i: "chartBox", x: 0, y: 0, w: chartWidth, h: 6.5, minW: 4, maxW:6, maxH: 6.5, minH: 6.5, isBounded: true},
     { i: "collateralBox", x: 4, y: 0, w: 2, h: 6.5, maxH: 6.5, minH: 6.5, isResizable: false, isBounded: true },
     { i: "orderBook", x: 0, y: 0, w: 4, h: 4, minH: 4, maxH: 4, minW: 4, maxW:6, isBounded: true },
     { i: "newsBox", x: 4, y: 0, w: 2, h: 4, isResizable: false, isBounded: true },
   ];
 
-  const phoneLayout = [
-    { i: "a", x: 0, y: 0, w: 4, h: 6, minW: 4, maxW:6, maxH: 6 },
-    { i: "b", x: 4, y: 0, w: 2, h: 6 },
-    { i: "c", x: 0, y: 0, w: 1, h: 2 },
-  ];
+  
 
   return (
     <>
@@ -52,14 +46,14 @@ export default function IndividaulAssetsPerpetuals() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="gradientBackground lightBackground z-50 flex h-fit flex-col items-center justify-center">
+      <main className="gradientBackground darkBackground z-50 flex h-screen flex-col items-center justify-start overflow-auto">
         <Header />
-        <section className="mb-10 flex h-fit w-full flex-row items-start justify-between pl-2 pr-5 pt-5">
+        <section className="mb-10 flex h-fit w-full flex-row items-start justify-between pl-3 pr-5 pt-5">
           <SideBar />
           <div className="ml-10 mr-6 h-fit w-full">
             <DataTopBar />
             <div
-              className="mt-5 flex h-fit w-full flex-row items-start justify-between px-3"
+              className="mt-5 h-screen w-full"
               id="tradeContainer"
             >
               <ReactGridLayout
@@ -68,7 +62,8 @@ export default function IndividaulAssetsPerpetuals() {
                 cols={6}
                 rowHeight={75}
                 isBounded={true}
-                compactType={"vertical"}
+                isResizable={isTradeLocked}
+                isDraggable={isTradeLocked}
               >
                 <div className="h-fit" key="chartBox"><ChartBox /></div>
                 <div className="h-fit" key="collateralBox"><ActionBox /></div>

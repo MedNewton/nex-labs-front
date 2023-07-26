@@ -40,6 +40,16 @@ type tradeStore = {
   //Short position margin amount
   tradeShortPositionMarginAmount: number;
   updateTradeShortPositionMarginAmount: (margin: number) => void;
+
+  isTradeLocked : boolean;
+  lockTrade: (lock: boolean) => void;
+
+  chartWidth: number;
+  changeChartWidth: (width: number) => void;
+
+  orderbookWidth: number;
+  changeOrderbookWidth: (width: number) => void;
+
 };
 
 const useTradeStore = create<tradeStore>()((set) => ({
@@ -91,6 +101,16 @@ const useTradeStore = create<tradeStore>()((set) => ({
   tradeShortPositionMarginAmount: 0.0,
   updateTradeShortPositionMarginAmount: (amount: number) =>
     set((state) => ({ tradeShortPositionMarginAmount: amount })),
+
+  isTradeLocked: false,
+  lockTrade: (lock: boolean) => set((state)=>({isTradeLocked: lock})),
+
+  chartWidth: 4,
+  changeChartWidth: (width: number) => set((state)=>({chartWidth: width})),
+
+  orderbookWidth: 4,
+  changeOrderbookWidth: (width: number) =>  set((state)=>({orderbookWidth: width})),
+
 }));
 
 export default useTradeStore;

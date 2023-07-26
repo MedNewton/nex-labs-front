@@ -17,13 +17,12 @@
     src: url('../assets/fonts/CircularStd-Black.ttf');
 }
 
-html
-{
+html {
     overflow-x: hidden;
 }
 
-body{
-    overflow-x: scroll;
+body {
+    overflow-x: hidden;
 }
 
 .gradientBackground {
@@ -37,6 +36,10 @@ body{
 
 .lightBackground {
     background-image: url('../assets/images/backgrounds/bg-light.png');
+}
+
+.darkBackground {
+    background-image: url('../assets/images/backgrounds/dark14.png');
 }
 
 .circularMedium {
@@ -111,32 +114,32 @@ body{
     border-radius: 3px !important;
 }
 
-.react-dropdown-select{
+.react-dropdown-select {
     max-width: 98% !important;
     border-width: 0px !important;
     align-items: center !important;
     margin-left: 1.5% !important;
 }
 
-.react-dropdown-select-content{
+.react-dropdown-select-content {
     color: #fff;
     font-size: 14px !important;
     font-weight: 500 !important;
     font-family: 'CircularBold' !important;
 }
 
-.react-dropdown-select-dropdown-handle{
+.react-dropdown-select-dropdown-handle {
     filter: brightness(1) invert(1);
 }
 
-.react-dropdown-select-input::placeholder{
+.react-dropdown-select-input::placeholder {
     color: #fff;
     font-size: 14px !important;
     font-weight: 500 !important;
     font-family: 'CircularBold' !important;
 }
 
-.react-dropdown-select-dropdown{
+.react-dropdown-select-dropdown {
     border-radius: 5px !important;
     width: fit-content !important;
     padding: 5%;
@@ -144,7 +147,7 @@ body{
     margin-right: auto !important;
 }
 
-.react-dropdown-select-item{
+.react-dropdown-select-item {
     font-size: 14px !important;
     font-weight: 500 !important;
     color: #464646 !important;
@@ -153,32 +156,35 @@ body{
     font-family: 'CircularBold' !important;
 }
 
-.dnaKnf, .jzvIMG, .jbKSMH, .hOqKLK{
+.dnaKnf,
+.jzvIMG,
+.jbKSMH,
+.hOqKLK {
     font-size: .6rem;
     margin-left: 5%;
 }
 
-#panel\:R5akm\:0:empty{
+#panel\:R5akm\:0:empty {
     display: none;
 }
 
-#panel\:R5akm\:1:empty{
+#panel\:R5akm\:1:empty {
     display: none;
 }
 
-#panel\:R3akm\:1:empty{
+#panel\:R3akm\:1:empty {
     display: none;
 }
 
-#panel\:R3akm\:0:empty{
+#panel\:R3akm\:0:empty {
     display: none;
 }
 
-.react-tabs div:empty{
+.react-tabs div:empty {
     display: none !important;
 }
 
-.szh-menu{
+.szh-menu {
     background: radial-gradient(231.00% 135.80% at 0.90% 2.98%, rgba(222, 222, 222, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
     backdrop-filter: blur(20px) !important;
     padding-top: 0px !important;
@@ -186,55 +192,56 @@ body{
     min-width: none !important;
 }
 
-.szh-menu__item{
+.szh-menu__item {
     min-width: none !important;
     width: fit-content !important;
 }
 
-.szh-menu__item:hover{
-    background-color:rgba(153, 153, 153, 0.107) !important;
+.szh-menu__item:hover {
+    background-color: rgba(153, 153, 153, 0.107) !important;
 }
 
-.szh-menu__item:hover p{
-    color:rgb(227, 227, 227) !important;
+.szh-menu__item:hover p {
+    color: rgb(227, 227, 227) !important;
 }
 
-.szh-menu__item:not(:hover){
+.szh-menu__item:not(:hover) {
     background-color: transparent !important;
 }
 
-.szh-menu__arrow{
+.szh-menu__arrow {
     background: radial-gradient(231.00% 135.80% at 0.90% 2.98%, rgba(222, 222, 222, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
     backdrop-filter: blur(20px) !important;
     z-index: 0;
 }
 
-.percentageSelector{
+.percentageSelector {
     width: fit-content !important;
     padding: 3px !important;
 }
 
-.percentageSelector:focus{
+.percentageSelector:focus {
     border-width: 0px !important;
 }
 
-.react-dropdown-select-content{
+.react-dropdown-select-content {
     width: fit-content !important;
     height: fit-content !important;
     flex-wrap: nowrap !important;
 }
 
-.tradeGrid{
+.tradeGrid {
     width: 100% !important;
     height: 100% !important;
+    
 }
 
-#tradeContainer{
-    height: 80vh;
-    transition: height 200ms ease;
-    overflow-y: visible;
-}
 
-.react-resizable-handle{
+.react-resizable-handle {
     opacity: 0 !important;
+}
+
+.react-dropdown-select-dropdown{
+    background: radial-gradient(231.00% 135.80% at 0.90% 2.98%, rgba(222, 222, 222, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%) !important;
+    backdrop-filter: blur(20px) !important;
 }

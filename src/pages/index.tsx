@@ -19,7 +19,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="gradientBackground lightBackground flex flex-col items-center justify-center">
+      <main className="gradientBackground darkBackground flex flex-col items-center justify-center">
         <Header />
         <DashboardIndices />
         <DashboardIndividualAssets />

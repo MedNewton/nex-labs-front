@@ -19,7 +19,7 @@ import expand_icon from "../../../assets/icons/expand.svg";
 import setting_icon from "../../../assets/icons/settings.svg";
 
 const ChartBox: React.FC = () => {
-  const { isDrawerOpen, toggleDrawer, selectedDuration, selectDuration } =
+  const { isDrawerOpen, toggleDrawer, selectedDuration, selectDuration, changeChartWidth } =
     useTradeStore();
 
   return (
@@ -53,7 +53,9 @@ const ChartBox: React.FC = () => {
             height={15}
             width={15}
             alt="settings"
+            
           ></Image>
+          
         </div>
       </div>
       <div className="flex h-fit w-full flex-row items-start justify-between py-1">

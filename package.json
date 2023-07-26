@@ -31,6 +31,7 @@
     "react-multi-carousel": "^2.8.4",
     "react-responsive-carousel": "^3.2.23",
     "react-sidebar": "^3.0.2",
+    "react-switch": "^7.0.0",
     "react-tabs": "^6.0.1",
     "styled-components": "^6.0.4",
     "zod": "^3.21.4",

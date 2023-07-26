@@ -138,7 +138,7 @@ const ActionBox: React.FC = () => {
                 className="circularMedium h-full w-2/3 bg-transparent pl-2 text-base text-white placeholder:text-gray-500"
               />
 
-              <button className="flex h-full w-1/3 flex-row items-center justify-center rounded-r-xl bg-red-500 py-1">
+              <button className="flex h-full w-1/3 flex-row items-center justify-center rounded-r-xl bg-red-500 py-3">
                 <span className="circularMedium text-xs text-white">
                   Withdraw Collateral
                 </span>
