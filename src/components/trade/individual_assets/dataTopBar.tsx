@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const DataTopBar: React.FC = () => {
   return (
-    <div className="glassy flex h-fit w-full flex-row items-start justify-between rounded-2xl px-5 py-3">
+    <div className="flex h-fit w-full flex-row items-start justify-between rounded-2xl px-5 py-3" id="dataTopBar">
       <div className="flex h-fit w-fit flex-col items-end justify-between px-1">
         <h5 className="circularBold text-base text-white">BAYC/USDC</h5>
         <p className="circularMedium text-sm text-white">

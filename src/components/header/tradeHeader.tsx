@@ -24,15 +24,17 @@ import headerMenu from "~/menus";
 // State
 import useTradeStore from "~/store/tradeStore";
 
-const Header: React.FC = () => {
+//Assets
+import { BsSearch, BsFillGrid1X2Fill, BsGrid } from "react-icons/bs";
+
+const TradeHeader: React.FC = () => {
   const { lockTrade, isTradeLocked } = useTradeStore();
 
   return (
-    <header className="left-0 z-50 flex w-screen flex-row items-start justify-between px-4 py-4">
-      <div className="left-0 flex w-1/2 items-start justify-between pl-3">
+    <header className="left-0 z-50 flex w-full flex-row items-start justify-between px-2 pt-6">
+      <div className="left-0 flex w-1/2 items-start justify-between">
         <div className="flex items-center">
-          <Image src={headerLogo} alt="Logo" width={35} height={35} />
-          <div className="flex items-start justify-evenly px-10">
+          <div className="flex items-start justify-evenly pr-10">
             {headerMenu.map((item, index) => {
               console.log(item);
               return <HoverMenuWithTransition key={index} menuItem={item} />;
@@ -41,24 +43,11 @@ const Header: React.FC = () => {
         </div>
       </div>
       <div className="right-0 flex w-1/2 justify-end px-10 align-middle">
-        <Image
-          src={search}
-          alt="search"
-          width={19}
-          height={19}
-          className="mr-7"
-        />
-
+        <BsSearch size={19} color="#CFCFCF" className="mr-7" style={{marginTop: "10px"}} />
         <Menu
           menuButton={
             <MenuButton>
-              <Image
-                src={layout}
-                alt="lock"
-                width={19}
-                height={19}
-                className="mr-7 cursor-pointer"
-              />
+              <BsGrid size={20} color="#CFCFCF" className="mr-7" />
             </MenuButton>
           }
           transition
@@ -80,10 +69,8 @@ const Header: React.FC = () => {
                 Lock layout
               </p>
             </div>
-            <hr className="mt-3 mb-3"/>
-            <p className="circularMedium text-sm text-white">
-                Preset layouts
-              </p>
+            <hr className="mb-3 mt-3" />
+            <p className="circularMedium text-sm text-white">Preset layouts</p>
           </div>
         </Menu>
         <div className="h-10 w-10 rounded-full bg-[url('https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=612x612&w=0&k=20&c=eU56mZTN4ZXYDJ2SR2DFcQahxEnIl3CiqpP3SOQVbbI=')] bg-cover bg-center bg-no-repeat "></div>
@@ -100,4 +87,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default TradeHeader;

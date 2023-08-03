@@ -105,7 +105,7 @@ const useTradeStore = create<tradeStore>()((set) => ({
   isTradeLocked: false,
   lockTrade: (lock: boolean) => set((state)=>({isTradeLocked: lock})),
 
-  chartWidth: 4,
+  chartWidth: 9,
   changeChartWidth: (width: number) => set((state)=>({chartWidth: width})),
 
   orderbookWidth: 4,
