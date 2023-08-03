@@ -429,8 +429,8 @@ const ChartBox: React.FC = () => {
           />
         </div>
       </div>
-      <div className="h-100 mt-3 w-full rounded-xl py-6" style={{backgroundColor: "#2C2D33"}}></div>
-      <div className="h-100 mt-2 w-full rounded-2xl border border-white opacity-10 py-52"></div>
+      <div className="h-100 mt-3 w-full rounded-xl py-6 bg-darkModeBoxBackground"></div>
+      <div className="h-100 mt-2 w-full rounded-2xl py-52 bg-darkModeBoxBackground"></div>
     </div>
   );
 };

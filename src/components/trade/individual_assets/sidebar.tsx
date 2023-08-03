@@ -17,7 +17,7 @@ import { AiOutlineLineChart } from "react-icons/ai";
 const SideBar: React.FC = () => {
   return (
     <div
-      className="flex h-full w-fit flex-col items-start justify-normal px-3 pt-5"
+      className="hidden lg:flex xl:flex 2xl:flex h-full w-fit flex-col items-start justify-normal px-3 pt-5"
       id="sideBar"
     >
       <Image
@@ -28,7 +28,7 @@ const SideBar: React.FC = () => {
         className="mb-14"
       ></Image>
       <div className="selectedSidebarElement mb-8">
-        <BsDatabase size={20} color="#F7F7F7"/>
+        <BsDatabase size={20} color="#020202"/>
       </div>
       <div className="sidebarElement mb-8">
         <BsBarChartSteps size={20} color="#939395" />

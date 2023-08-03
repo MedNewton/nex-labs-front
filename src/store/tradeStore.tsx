@@ -5,6 +5,9 @@ type tradeStore = {
   isDrawerOpen: boolean;
   toggleDrawer: () => void;
 
+  isMobileMenuOpen: boolean;
+  toggleMobileMenu: () => void;
+
   //Duration buttons on the trade page
   selectedDuration: string;
   selectDuration: (duration: string) => void;
@@ -53,6 +56,10 @@ type tradeStore = {
 };
 
 const useTradeStore = create<tradeStore>()((set) => ({
+  // Mobile menu
+  isMobileMenuOpen: false,
+  toggleMobileMenu: () => set((state) => ({ isMobileMenuOpen: !state.isMobileMenuOpen })),
+  
   //Drawer of the trade page
   isDrawerOpen: false,
   toggleDrawer: () => set((state) => ({ isDrawerOpen: !state.isDrawerOpen })),

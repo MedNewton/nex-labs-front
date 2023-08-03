@@ -31,7 +31,7 @@ const TradeHeader: React.FC = () => {
   const { lockTrade, isTradeLocked } = useTradeStore();
 
   return (
-    <header className="left-0 z-50 flex w-full flex-row items-start justify-between px-2 pt-6">
+    <header className="left-0 z-50 hidden w-full flex-row items-start justify-between px-2 pt-6 lg:flex xl:flex 2xl:flex">
       <div className="left-0 flex w-1/2 items-start justify-between">
         <div className="flex items-center">
           <div className="flex items-start justify-evenly pr-10">
@@ -43,7 +43,18 @@ const TradeHeader: React.FC = () => {
         </div>
       </div>
       <div className="right-0 flex w-1/2 justify-end px-10 align-middle">
-        <BsSearch size={19} color="#CFCFCF" className="mr-7" style={{marginTop: "10px"}} />
+        <input
+          placeholder="Search..."
+          className="js-search rounded-2xl border border-gray-100"
+          type="text"
+        />
+        <BsSearch
+          size={19}
+          color="#CFCFCF"
+          className="mr-7"
+          style={{ marginTop: "10px" }}
+        />
+
         <Menu
           menuButton={
             <MenuButton>

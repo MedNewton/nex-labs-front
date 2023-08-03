@@ -14,8 +14,8 @@ import "react-resizable/css/styles.css";
 import useTradeStore from "~/store/tradeStore";
 
 // Components
-import Header from "~/components/header/header";
 import TradeHeader from "~/components/header/tradeHeader";
+import MobileTradeHeader from "~/components/header/moileTradeHeader";
 import SideBar from "~/components/trade/individual_assets/sidebar";
 import DataTopBar from "~/components/trade/individual_assets/dataTopBar";
 import ChartBox from "~/components/trade/individual_assets/chartBox";
@@ -94,11 +94,12 @@ export default function IndividaulAssetsPerpetuals() {
           <SideBar />
           <div className="flex h-screen w-full flex-col items-center justify-start overflow-y-scroll pb-40">
             <TradeHeader />
-            <div className="flex h-fit w-full flex-row items-start justify-start pl-7 pr-11 pt-4">
+            <MobileTradeHeader />
+            <div className="hidden lg:flex xl:flex 2xl:flex h-fit w-full flex-row items-start justify-start pl-7 pr-11 pt-4">
               <DataTopBar />
             </div>
             {
-              <div className="mt-5 h-screen w-full pl-5 pr-8" id="tradeContainer">
+              <div className="hidden lg:flex xl:flex 2xl:flex mt-5 h-screen w-full pl-5 pr-8" id="tradeContainer">
                 <ReactGridLayout
                   className="tradeGrid"
                   layout={layout}
@@ -114,13 +115,13 @@ export default function IndividaulAssetsPerpetuals() {
                   <div className="h-fit" key="collateralBox">
                     <ActionBox />
                   </div>
-                  <div className="rounded-xl p-3" style={{backgroundColor: "#2C2D33"}} key="orderBook">
-                    <p className="circularMedium text-sm text-white">
+                  <div className="rounded-xl p-3" style={{backgroundColor: "#1C2732"}} key="orderBook">
+                    <p className="circularMedium text-sm text-darkModeTextWhite">
                       Order Book
                     </p>
                   </div>
-                  <div className="rounded-xl p-3" style={{backgroundColor: "#2C2D33"}} key="newsBox">
-                    <p className="circularMedium text-sm text-white">News</p>
+                  <div className="rounded-xl p-3" style={{backgroundColor: "#1C2732"}} key="newsBox">
+                    <p className="circularMedium text-sm text-darkModeTextWhite">News</p>
                   </div>
                 </ReactGridLayout>
               </div>
